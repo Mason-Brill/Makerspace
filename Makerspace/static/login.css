@@ -1,0 +1,249 @@
+/* login.css
+ *
+ * used by: addEquipment.html, editEquipment.html, login.html, logout.html, register.html
+ *
+ * REFERENCES
+ * https://forum.bubble.io/t/removing-shadow-style-from-dropdown-menu-in-safari/33044/2 */
+
+@charset "UTF-8";
+
+/* add spacing around UT logo */
+.navbar-brand {
+    padding: 15px 10px !important;
+}
+
+/* customize navigation links here */
+.navbar * {
+    color: rgb(0,0,0) !important;
+    font-size: 25px;
+}
+
+/* color is UT red */
+.navbar a:hover {
+	color: rgb(200,16,46) !important;
+}
+
+/* adds space between navigation links */
+.navbar ul li {
+    padding: 0px 10px;
+}
+
+/* remove border from fa-bars */
+.navbar-toggler {
+    border: none !important;
+}
+
+/* right align navbar links when collapsed */
+.navbar-collapse {
+    text-align: right;
+}
+
+/******************* Makerspace Availability Dot *********************/
+ /* creates a green dot that shows that a worker is online */
+.worker_available {
+    height: 25px;
+    width: 25px;
+    background-color: greenyellow;
+    border-radius: 50%;
+    /*display: inline-block;*/
+    text-align: right;
+ }
+
+/* creates a red dot that shows that a worker is offline */
+.worker_unavailable {
+    height: 25px;
+    width: 25px;
+    background-color: red;
+    border-radius: 50%;
+    /*display: inline-block;*/
+    text-align: right;
+ }
+
+/* format number in red/green dot */
+.worker_number {
+    font-size: 16px;
+    text-align: center;
+    vertical-align: middle;
+ }
+
+/* format emergency text button */
+.emergency-btn {
+    float: right;
+    border: none;
+    padding: 10px 10px !important;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: rgb(200,16,46);
+    color: rgb(255,255,255) !important;
+}
+
+/* keeps emergency text white */
+.navbar a.emergency-btn:hover {
+	color: rgb(255,255,255) !important;
+}
+
+/* black dividing bar */
+.div_bar {
+    background-color: rgb(0,0,0);
+    color: rgb(255,255,255);
+    padding: 12px 20px;
+    text-align: left;
+    font-size: 25px;
+    font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+}
+
+
+/******************** login ********************/
+
+/* flexbox container for login */
+.login_container {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px 5px 1px;
+    /*justify-content: center;*/
+    align-items: center;
+    flex-direction: column;
+    font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 100vh;
+    overflow: scroll;
+    /* TODO --> figure out how to add min-height to prevent window from resizing too small */
+ }
+
+ /* login in title */
+ .signup_title {
+    margin: 20px 0px 10px;
+ }
+
+ /* form error message */
+ .error_message {
+    color: rgb(200,16,46);
+    font-style: oblique;
+ }
+
+ /* coming soon formatting */
+.coming_soon {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 5px 1px;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 40px;
+    color: rgb(200,16,46);
+}
+
+/* enter your username textbox */
+input[type=email] {
+    width: 360px;
+    padding: 10px 15px;
+    border: none;
+    border-bottom: 2px solid rgb(200,16,46);
+}
+
+/* enter password textbox */
+input[type=password] {
+    width: 360px;
+    padding: 10px 15px;
+    border: none;
+    border-bottom: 2px solid rgb(200,16,46);
+}
+
+/* enter text textbox */
+input[type=text] {
+    width: 360px;
+    padding: 10px 15px;
+    border: none;
+    border-bottom: 2px solid rgb(200,16,46);
+}
+
+/* enter email and password text box */
+.textbox {
+    padding: 10px 10px;
+    border-radius: 0px;
+    color: rgb(0,0,0);
+    font-size: 16px;
+    text-align: left;
+    font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+/* placeholder text in form */
+::placeholder {
+    color: rgb(150,150,150);
+    opacity: 1;
+    font-style: oblique;
+    font-weight: normal;
+}
+
+/* drop down menu */
+.drop_menu {
+    width: 360px !important;
+    padding: 10px 15px !important;
+    border: none;
+    border-bottom: 2px solid rgb(200,16,46) !important;
+    background-color: rgb(255,255,255);
+
+    /* TODO --> determine which of the following are necessary */
+    /* TODO --> find a different background image: light grey down arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E')
+      !important;
+    background-repeat: no-repeat, repeat !important;
+    background-position: right .7em top 50%, 0 0 !important;
+    background-size: .65em auto, 100% !important;
+    border: none;
+    border-radius: 0px;
+
+    color: rgb(150,150,150);
+    opacity: 1;
+    font-style: oblique;
+    font-weight: normal;
+}
+
+/* login button */
+.button {
+    border: none;
+    width: 360px;
+    padding: 15px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: rgb(200,16,46);
+    color: rgb(255,255,255);
+}
+
+/* "don't have an account? signup here" text at the bottom of login */
+.bottom{
+    color: rgb(0,0,0);
+    font-style: oblique;
+    font-weight: bold;
+}
+
+/* footer at bottom of page */
+.footer_bar {
+    background-color: rgb(0,0,0);
+    color: rgb(255,255,255) !important;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+/* bug link at bottom of page */
+.bug_link {
+    font-weight: bold;
+}
+
+/* keeps bug link white */
+.navbar a.bug_link:hover {
+	color: rgb(255,255,255) !important;
+}

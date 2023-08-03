@@ -1,0 +1,1 @@
+The Bantam Tools Desktop CNC milling machine allows milling of wood, many metals (but is optimized for aluminum), FR-1 copper-clad PCB (printed circuit board) blanks, and more. It supports designs up to 7” by 9” by 3.3” high (208 in3). It can be used to fabricate custom PCBs.

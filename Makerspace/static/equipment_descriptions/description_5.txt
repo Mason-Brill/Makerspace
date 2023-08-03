@@ -1,0 +1,2 @@
+Two Makerbot Replicator+ single extruder 3D printers support fabrication of designs up
+to 11.6” by 7.6” by 6.5” high (573 in3) with PLA, tough PLA, and other filaments. Using fused filament fabrication technology, they feature a flexible grip surface (non-heated bed) and 100 micron layer resolution. These 3D printers are great for rough 3D prototyping and are accessed through desktop computers in the Makerspace.

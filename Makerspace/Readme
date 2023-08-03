@@ -1,0 +1,89 @@
+NOTES
+[1] We've made significant changes to our database since the last benchmark. Your best option is to delete and create the database tables from scratch.
+[2] For increased security, we are now using bcrypt to hash the user passwords. You will need to install the bcrypt library.
+[3] Due to the unreliability of certain phone carriers, we updated our website to send emergency texts to a discord server. We invited you to this discord server, but you can paste your own discord webhook to line 33 of app.py to send the texts the discord server of your choice. Instructions to create your webhook can be found in discord_text.py (see the reference in that file for instructions with pictures).
+[4] We will provide you with information to log into the google account needed to view the reserve and bug forms and the google account needed to create the worker calendars via email and when we submit the assignment.
+
+INFORMATION TO GET STARTED
+[1] Our website uses a MySQL database with four tables.
+You can create the database and tables by running the appropriate lines in the following files:
+makerspace_accounts.sql, makerspace_passwords, makerspace_employee_hours, and makerspace_equipment.sql
+Each of these files is commented to explain which lines to run to create the table. The equipment table has additional
+lines of code that you need to run to populate the table with the starting equipment. You will need to run four additional
+lines of code to populate the table with the description and image file names (this is indicated in the comments).
+[2] In order for the website to access the database, you need to add your database password to line 22 of the file database.py
+[3] Our website uses a Google API in test mode which means we have to create new credentials and a new token every 7 - 10 days.
+In the event you need to create new credentials, there are supporting documents with detailed instructions on how to do this. To avoid this insanity, you can choose to publish the app.
+[4] At a minimum, you may need to install the following libraries: flask, mysql-connector-python, google, google-auth, googleAPI, bcrypt
+
+BUGS
+[1] We aren't aware of any bugs, although we are sure there are some we've missed.
+[2] We have a google form to submit bugs in the footer of each page of the website.
+
+LIMITATIONS
+[1] It isn't currently possible to edit equipment via the website, but we have a column in the database ready to keep
+track of the last_modified date when this feature is added.
+[2] It isn't currently possible to hide a piece of equipment in the database from being shown on the website, but the table
+contains a column (is_visible) to keep track of this, so this feature can be added in the future.
+[3] It isn't currently possible for users to edit their account information via the website, but we have a column in the
+database ready to keep track of the last_modified date when this feature is added.
+[4] It isn't currently possible for administrators to edit the privilege level of users via the website, but we've included
+a line of code in the makerspace_accounts.sql file that you can edit and run to update a users privilege level until that
+feature is added.
+[5] When administrators add equipment to the database, we don't currently verify that they upload the correct file type and size.
+
+WHY YOU SHOULD CHOOSE OUR WEBSITE
+[1] Our website is simple to use and built to be easily maintained.
+        - The code is well commented and written to be human readable.
+        - The python files include example code to show you examples of how to use the functions contained in that file.
+        - The python functions are logically grouped into different files separate from app.py.
+        - Whenever possible, the python functions are small with single responsibilities.
+        - The equipment is automatically added to the website from the database, so you don't need to edit the HTML each
+          time you add a new piece of equipment to the database.
+[2] We implemented a relational database to maximize security and minimize data duplication.
+        - User passwords are hashed using the bcrypt algorthm and stored in their own table that is linked to the accounts
+          table via the user_id.
+        - When worker's sign in to work in the makerspace via the website, it creates a timestamped entry in a separate
+          table of the database linked to the accounts table via the user_id. When workers sign out of work, the time is
+          recorded. This allows the database to track when and how many hours workers work in the makerspace (assuming
+          they sign in and out).
+
+TIPS TO GET STARTED WITH MySQL
+[1] install MySQL community Server: https://dev.mysql.com/downloads/mysql/
+[2] create a password for the root user (do not forget this password)
+[3] open terminal and enter: mysql
+[4] if you get the error ‘command not found’ enter this in your terminal and then close and restart the terminal:
+	echo "export PATH=${PATH}:/usr/local/mysql/bin" >> ~/.zshrc
+[5] if you get an error ‘Access denied for user’ enter this command and then the password created in step 2: mysql -u root -p
+[6] to stop using mysql in the terminal type: quit;
+[7] install MySQL Workbench: https://dev.mysql.com/downloads/workbench/
+	—> if this version crashes repeatedly, install version 8.0.31 https://downloads.mysql.com/archives/workbench/  (this is what Rebecca had to do)
+	—> if this version doesn’t work for your computer’s architecture, install: https://dbgate.org/ (this is what Abhi had to do)
+	—> when you open dbgate, you will have to select MySQL as the connection type, keep the server as localhost, the port as 3306, enter ‘root’ as the User and enter the password you created in step 2
+	
+
+TIPS FOR USING PyCharm
+[1] Download the zip file called final_version and open in PyCharm
+[2] Click on the warning: “Invalid python interpreter selected for the project”
+[3] Click on the link “configure python interpreter” and then “add new interpreter" and “add local interpreter”. (I did
+not make any changes and just clicked ok.)
+[4] Go ahead and run app.py. This will let you know exactly which libraries you are missing. Most likely you will need to
+install flask, mysql-connector-python, google, google-auth, googleAPI, bcrypt. You can install these missing
+libraries by using the Python Packages tab located near the bottom left of the pyCharm window.
+
+TIPS FOR USING VS Code
+[1] Download the zip file called final_version and open in VS Code
+[3] Click on View -> command palette
+[4] Search for "Python: Create Environment" and click on it
+[5] Choose Venv
+[6] Select interpreter (I choose the most recent one which for me was "3.11.1 64-bit /usr/local/bin/python3")
+[7] Click on Terminal --> New Terminal
+If you opened the terminal correctly, you should see (.venv) (base) some stuff about your computer and the folder you are in and then the %.
+[8] Enter the following commands one by one into the terminal to install all the necessary packages. If at any point the terminal
+doesn't have the (.venv) to it's left close it and open a new one.
+python -m pip install flask
+python -m pip install mysql-connector-python
+python -m pip install google
+python -m pip install google-auth
+python -m pip install googleAPI
+python -m pip install bcrypt

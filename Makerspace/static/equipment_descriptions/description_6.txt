@@ -1,0 +1,1 @@
+One Ultimaker S3 dual extruder 3D printer supports fabrication of designs up to 9” by 7.4” by 7.9” high (526 in3) with PLA, tough PLA, Nylon, ABS, CPE, and other filaments. Using fused filament fabrication technology, it features a heated glass surface and 20 to 600 micron layer resolution. This 3D printer is great for polished designs and is accessed via USB.

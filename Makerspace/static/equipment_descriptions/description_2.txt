@@ -1,0 +1,2 @@
+Three soldering stations allow students to populate custom milled printed circuit boards
+with electronic components.

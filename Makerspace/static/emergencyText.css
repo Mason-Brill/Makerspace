@@ -1,0 +1,192 @@
+/* emergencyText.css
+ *
+ * used by: emergencyText.html
+ *
+ * REFERENCES
+ * https://forum.bubble.io/t/removing-shadow-style-from-dropdown-menu-in-safari/33044/2 */
+
+@charset "UTF-8";
+
+/* add spacing around UT logo */
+.navbar-brand {
+    padding: 15px 10px !important;
+}
+
+/* customize navigation links here */
+.navbar * {
+    color: rgb(0,0,0) !important;
+    font-size: 25px;
+}
+
+/* color is UT red */
+.navbar a:hover {
+	color: rgb(200,16,46) !important;
+}
+
+/* adds space between navigation links */
+.navbar ul li {
+    padding: 0px 10px;
+}
+
+/* remove border from fa-bars */
+.navbar-toggler {
+    border: none !important;
+}
+
+/* right align navbar links when collapsed */
+.navbar-collapse {
+    text-align: right;
+}
+
+/******************* Makerspace Availability Dot *********************/
+/* creates a green dot that shows that a worker is online */
+.worker_available {
+    height: 25px;
+    width: 25px;
+    background-color: greenyellow;
+    border-radius: 50%;
+    /*display: inline-block;*/
+    text-align: right;
+ }
+
+/* creates a red dot that shows that a worker is offline */
+.worker_unavailable {
+    height: 25px;
+    width: 25px;
+    background-color: red;
+    border-radius: 50%;
+    /*display: inline-block;*/
+    text-align: right;
+ }
+
+/* format number in red/green dot */
+.worker_number {
+    font-size: 16px;
+    text-align: center;
+    vertical-align: middle;
+ }
+
+/* format emergency text button */
+.emergency-btn {
+    float: right;
+    border: none;
+    padding: 10px 10px !important;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: rgb(200,16,46);
+    color: rgb(255,255,255) !important;
+}
+
+/* keeps emergency text white */
+.navbar a.emergency-btn:hover {
+	color: rgb(255,255,255) !important;
+}
+
+/* black dividing bar */
+.div_bar {
+    background-color: rgb(0,0,0);
+    color: rgb(255,255,255);
+    padding: 12px 20px;
+    text-align: left;
+    font-size: 25px;
+    font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+}
+
+
+/******************** login ********************/
+
+/* flexbox container for login */
+.login_container {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px 5px 1px;
+    /*justify-content: center;*/
+    align-items: center;
+    flex-direction: column;
+    font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 100vh;
+    overflow: scroll;
+    /* TODO --> figure out how to add min-height to prevent window from resizing too small */
+ }
+
+ /* emergency title */
+ .title {
+    margin: 20px 0px 10px;
+    color: rgb(200,16,46);
+    font-size: 20px;
+ }
+
+ /* error message */
+ .error_message {
+    color: rgb(200,16,46);
+    font-style: oblique;
+ }
+
+/* enter text textbox */
+input[type=text] {
+    width: 360px;
+    padding: 10px 15px;
+    border: none;
+    border-bottom: 2px solid rgb(200,16,46);
+}
+
+/* enter email and password text box */
+.textbox {
+    padding: 10px 10px;
+    border-radius: 0px;
+    color: rgb(0,0,0);
+    font-size: 16px;
+    text-align: left;
+    font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    width: 360px;
+
+}
+
+/* placeholder text in form */
+::placeholder {
+    color: rgb(150,150,150);
+    opacity: 1;
+    font-style: oblique;
+    font-weight: normal;
+}
+
+
+/* login button */
+.button {
+    border: none;
+    width: 360px;
+    padding: 15px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: rgb(200,16,46);
+    color: rgb(255,255,255);
+}
+
+/* footer at bottom of page */
+.footer_bar {
+    background-color: rgb(0,0,0);
+    color: rgb(255,255,255) !important;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+/* bug link at bottom of page */
+.bug_link {
+    font-weight: bold;
+}
+
+/* keeps bug link white */
+.navbar a.bug_link:hover {
+	color: rgb(255,255,255) !important;
+}
